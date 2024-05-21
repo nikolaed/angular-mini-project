@@ -1,0 +1,35 @@
+<!-- <div class="navbar">
+  <div class="links">
+    <ul>
+      <li><a routerLink="/posts" routerLinkActive="active">Posts</a></li>
+      <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+      <li><a routerLink="/movies" (click)="goToMovies()" routerLinkActive="active">Movies</a></li>
+      <li><a routerLink="/pokemons" routerLinkActive="active">Pokemons</a></li>
+      <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+      <li><a routerLink="/photoAlbum" routerLinkActive="active">Album with Photos</a></li>
+      <li><a routerLink="/user" routerLinkActive="active">Add User</a></li>
+    </ul>
+  </div>
+  <div class="actions">
+    <button mat-raised-button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+  </div>
+</div> -->
+
+
+<mat-toolbar color="primary">
+  <span class="navbar-title">My App</span>
+  <div class="links">
+    <ul>
+      <li><a mat-button routerLink="/posts" routerLinkActive="active">Posts</a></li>
+      <li><a mat-button routerLink="/login" routerLinkActive="active">Login</a></li>
+      <li><a mat-button routerLink="/movies" (click)="goToMovies()" routerLinkActive="active">Movies</a></li>
+      <li><a mat-button routerLink="/pokemons" routerLinkActive="active">Pokemons</a></li>
+      <li><a mat-button routerLink="/products" routerLinkActive="active">Products</a></li>
+      <li><a mat-button routerLink="/photoAlbum" routerLinkActive="active">Album with Photos</a></li>
+      <li><a mat-button routerLink="/user" routerLinkActive="active">Add User</a></li>
+    </ul>
+  </div>
+  <div class="actions">
+    <button mat-raised-button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>

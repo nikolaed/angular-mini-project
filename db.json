@@ -1,0 +1,104 @@
+{
+  "locations": [
+    {
+      "id": 0,
+      "name": "Acme Fresh Start Housing",
+      "city": "Chicago",
+      "state": "IL",
+      "photo": "https://smartcdn.gprod.postmedia.digital/nationalpost/wp-content/uploads/2022/08/0826_ESBB_Housing_feature.jpg",
+      "availableUnits": 4,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": 1,
+      "name": "A113 Transitional Housing",
+      "city": "Santa Monica",
+      "state": "CA",
+      "photo": "https://www.shutterstock.com/image-photo/beautiful-home-exterior-600nw-160071032.jpg",
+      "availableUnits": 0,
+      "wifi": false,
+      "laundry": true
+    },
+    {
+      "id": 2,
+      "name": "Warm Beds Housing Support",
+      "city": "Juneau",
+      "state": "AK",
+      "photo": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg",
+      "availableUnits": 1,
+      "wifi": false,
+      "laundry": false
+    },
+    {
+      "id": 3,
+      "name": "Homesteady Housing",
+      "city": "Chicago",
+      "state": "IL",
+      "photo": "https://www.mydomaine.com/thmb/bepet4VMGUG70sCLFNQRdZm9bbg=/2048x0/filters:no_upscale():strip_icc()/SuCasaDesign-Modern-9335be77ca0446c7883c5cf8d974e47c.jpg",
+      "availableUnits": 1,
+      "wifi": true,
+      "laundry": false
+    },
+    {
+      "id": 4,
+      "name": "Happy Homes Group",
+      "city": "Gary",
+      "state": "IN",
+      "photo": "https://cityfurnish.com/blog/wp-content/uploads/2023/07/living-room-filled-with-furniture-red-wall-generative-ai-image-min.jpg",
+      "availableUnits": 1,
+      "wifi": true,
+      "laundry": false
+    },
+    {
+      "id": 5,
+      "name": "Hopeful Apartment Group",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://content.jdmagicbox.com/comp/indore/r2/0731px731.x731.211127123203.z2r2/catalogue/rs-home-design-sukhliya-indore-interior-designers-7bf3h9wdj2.jpg",
+      "availableUnits": 2,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": 6,
+      "name": "Seriously Safe Towns",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://tjh.com/wp-content/uploads/2023/04/denver-new-home-Meade2.webp",
+      "availableUnits": 5,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": 7,
+      "name": "Hopeful Housing Solutions",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://dlqxt4mfnxo6k.cloudfront.net/houstonhomesllc.com/aHR0cHM6Ly9zMy5hbWF6b25hd3MuY29tL2J1aWxkZXJjbG91ZC9iNjdjNzM0YTFiMTBhODFlNDA0ZDUyYmQ0ZGRlYzFiZC5wbmc=/1200/1200",
+      "availableUnits": 2,
+      "wifi": true,
+      "laundry": true
+    },
+    {
+      "id": 8,
+      "name": "Seriously Safe Towns",
+      "city": "Oakland",
+      "state": "CA",
+      "photo": "https://cdn.houseplansservices.com/content/gera9urunspgqrlluolmjiaoun/w384x256.png?v=2",
+      "availableUnits": 10,
+      "wifi": false,
+      "laundry": false
+    },
+    {
+      "id": 9,
+      "name": "Capital Safe Towns",
+      "city": "Portland",
+      "state": "OR",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Jo_ZxRFx7kWqyLpXXyDvtuF7WSfCxPPQvHbSFX0hNQS9ANHQ70k8xiFEn6z_sFbuSrw&usqp=CAU",
+      "availableUnits": 6,
+      "wifi": true,
+      "laundry": true
+    }
+  ]
+}

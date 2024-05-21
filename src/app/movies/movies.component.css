@@ -1,0 +1,46 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .centered-content {
+    margin-bottom: 20px;
+    text-align: center; /* Center the content horizontally */
+  }
+  
+  .rating-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the button vertically */
+  }
+  
+  .movies-list {
+    width: 100%; /* Take full width */
+
+  }
+  
+  .movie-item {
+    margin-bottom: 10px; /* Add space between movies */
+  }
+  
+  .mat-button-toggle-group {
+    margin-bottom: 10px;
+  }
+  
+  .reset-btn {
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 18px;
+    text-align: center;
+  }
+  

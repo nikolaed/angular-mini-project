@@ -1,0 +1,33 @@
+<!-- <div class="posts">
+    <h2>Posts</h2>
+    <ul>
+        <li *ngFor="let post of posts">
+            <a [routerLink]="['/posts', post.id]">{{ post.title }}</a>
+        </li>
+    </ul>
+</div> -->
+
+<!-- <mat-card>
+    <mat-card-header>
+      <mat-card-title>Posts</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let post of posts"><a [routerLink]="['/posts', post.id]">{{ post.title }}</a></mat-list-item>
+       </mat-list>
+    </mat-card-content>
+</mat-card> -->
+
+<h2 class="posts-title">Posts</h2>
+
+<div class="posts-container">
+  <mat-card *ngFor="let post of posts" class="post-card">
+    <mat-card-header>
+      <mat-card-title class="post-title">{{ post.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <a [routerLink]="['/posts', post.id]" class="post-link">Read more</a>
+    </mat-card-content>
+  </mat-card>
+</div>
+

@@ -1,0 +1,12 @@
+<div class="post-details">
+  <h2 class="post-title">Title: {{ post?.title }}</h2>
+  <p class="post-body">Body: {{ post?.body }}</p>
+  <h3 class="comments-title">Comments:</h3>
+  <mat-list class="comments-list">
+    <mat-list-item *ngFor="let comment of comments" class="comment-item">
+      <strong class="comment-name">Name: {{ comment.name }}</strong>
+      <br />
+      <span class="comment-body">Body: {{ comment.body }}</span>
+    </mat-list-item>
+  </mat-list>
+</div>

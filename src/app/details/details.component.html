@@ -1,0 +1,67 @@
+<article>
+  <img alt="nema" class="listing-photo" [src]="housingLocation?.photo" />
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
+    <p class="listing-location">
+      {{ housingLocation?.city }}, {{ housingLocation?.state }}
+    </p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this housing location</h2>
+    <mat-list>
+      <mat-list-item
+        >Units available: {{ housingLocation?.availableUnits }}</mat-list-item
+      >
+      <mat-list-item
+        >Does this location have wifi:
+        {{ housingLocation?.wifi }}</mat-list-item
+      >
+      <mat-list-item
+        >Does this location have laundry:
+        {{ housingLocation?.laundry }}</mat-list-item
+      >
+    </mat-list>
+    <!-- <ul>
+        <li>Units available: {{ housingLocation?.availableUnits }}</li>
+        <li>Does this location have wifi: {{ housingLocation?.wifi }}</li>
+        <li>
+          Does this location have laundry: {{ housingLocation?.laundry }}
+        </li>
+      </ul> -->
+  </section>
+
+  <section class="listing-apply">
+    <h2 class="section-heading">Apply now to live here</h2>
+    <form [formGroup]="applyForm" (submit)="submitApplication()">
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          id="first-name"
+          type="text"
+          formControlName="firstName" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput id="last-name" type="text" formControlName="lastName" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput id="email" type="email" formControlName="email" />
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" class="primary">Apply now</button>
+      <!-- <label for="first-name">First Name</label>
+        <input id="first-name" type="text" formControlName="firstName" />
+
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" formControlName="lastName" />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" />
+        <button type="submit" class="primary">Apply now</button> -->
+    </form>
+  </section>
+</article>

@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Align items horizontally */
+  align-items: center; /* Vertically center items */
+}
+
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.links ul li:last-child {
+  margin-right: 0;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.links ul li a.active {
+  font-weight: bold;
+}
+
+.actions button {
+  margin-left: 10px;
+}
+

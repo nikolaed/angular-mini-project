@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+  }
+  
+  .paginator-container {
+    margin-right: auto;
+  }
+
+  .button-container button {
+    margin-right: 10px; /* Add space between buttons */
+  }
+
+  /* Center loading indicator */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Adjust height as needed */
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust margin-top as needed */
+}
+
+.product-details {
+  margin-top: 20px;
+}
+
+/* Style Pokemons heading */
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Style each Pokemon item */
+.pokemon-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Style paginator container */
+.paginator-container {
+  margin-top: 20px;
+}
+
+/* Style button container */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+}
+
+/* Style individual buttons */
+.button-container button {
+  margin-right: 10px;
+}
+
+/* Add hover effect to buttons */
+.button-container button:hover {
+  opacity: 0.8;
+}
+
+/* Style error message */
+.error-message {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+}

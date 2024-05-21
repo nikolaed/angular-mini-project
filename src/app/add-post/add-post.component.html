@@ -1,0 +1,31 @@
+<!-- <div class="add-post">
+    <h2>Add Post</h2>
+    <form (ngSubmit)="addPost()">
+        <div class="form-group">
+            <label for="postTitle">Title:</label>
+            <input type="text" id="postTitle" name="postTitle" [(ngModel)]="newPost.title" required>
+        </div>
+        <div class="form-group">
+            <label for="postBody">Body:</label>
+            <textarea id="postBody" name="postBody" [(ngModel)]="newPost.body" required></textarea>
+        </div>
+        <button type="submit">Add Post</button>
+    </form>
+</div> -->
+
+<div class="add-post">
+  <h2>Add Post</h2>
+  <form [formGroup]="addPostForm" (ngSubmit)="addPost()">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="Title" formControlName="title" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Body</mat-label>
+      <textarea matInput placeholder="Body" formControlName="body"></textarea>
+    </mat-form-field>
+    <button mat-raised-button type="submit" [disabled]="addPostForm.invalid">
+      Add Post
+    </button>
+  </form>
+</div>

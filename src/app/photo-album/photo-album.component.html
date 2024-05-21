@@ -1,0 +1,10 @@
+<mat-tab-group class="album-tab-group">
+    <mat-tab *ngFor="let album of getAlbumKeys()">
+        <ng-template mat-tab-label>{{ 'Album ' + (album + 1) }}</ng-template>
+        <div class="photo-container">
+            <div class="photo" *ngFor="let photo of albums[album]">
+                <img [src]="photo.thumbnailUrl" alt="{{ photo.title }}">
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>

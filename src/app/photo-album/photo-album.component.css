@@ -1,0 +1,32 @@
+.album-tab-group {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  overflow: hidden; /* Hide overflow of tab group */
+}
+
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Add space between photos */
+  padding: 20px;
+}
+
+.photo {
+  width: calc(33.33% - 20px); /* Adjust photo width */
+  box-sizing: border-box;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+/* Style tab label */
+.mat-tab-label {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px; /* Adjust tab label padding */
+}

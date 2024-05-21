@@ -1,0 +1,54 @@
+<!-- <div *ngFor="let pokemon of getPageItems()">
+    {{ pokemon.pokemon }}
+</div>
+
+<div>
+    <button (click)="prevPage()">Previous</button>
+    <button *ngFor="let page of totalPagesArray" (click)="goToPage(page)">{{ page }}</button>
+    <button (click)="nextPage()">Next</button>
+</div>
+<br>
+<button (click)="sortPokemonByHitPoints()">Sort by Hit Points</button> -->
+
+<div class="loading-container">
+<div *ngIf="loadingService.loading$ | async" class="loading">
+  <img src="https://i.pinimg.com/originals/f3/98/c8/f398c8e928e0886d86c00e7770ccab78.gif" alt="Loading...">
+</div>
+</div>
+
+<div *ngIf="!(loadingService.loading$ | async)">
+  <div *ngIf="pokemonList && pokemonList.length > 0" class="product-details">
+    <h2>Pokemons</h2>
+    <div *ngFor="let pokemon of pokemonList | slice: getStartIndex():getEndIndex()" class="pokemon-item">
+      <p>{{ pokemon.pokemon }} (Rating: {{ pokemon.hitpoints }})</p>
+    </div>
+    <div class="container">
+      <div class="paginator-container">
+          <mat-paginator [length]="paginationService.totalItems$ | async" [pageSize]="pageSize" (page)="onPageChange($event)"></mat-paginator>
+      </div>
+    </div>
+  
+    <div class="button-container">
+      <button mat-button color="primary" style="border: 2px solid green;" (click)="sortPokemonByHitPoints()">Sort by Hit Points</button>
+      <button mat-button color="primary" style="border: 2px solid blue;" (click)="sortPokemonDescending()">Sort Descending</button>
+    </div>
+  </div>
+
+  <div *ngIf="!pokemonList || (pokemonList.length === 0 && !(loadingService.loading$ | async)) && showErrorMessage" class="error-message">
+    Failed to load product data.
+</div>
+
+
+
+<!-- <div *ngFor="let pokemon of pokemonList | slice: getStartIndex():getEndIndex()">
+    <p>{{ pokemon.pokemon }}</p>
+</div>
+
+<div class="container">
+    <div class="paginator-container">
+        <mat-paginator [length]="paginationService.totalItems$ | async" [pageSize]="pageSize" (page)="onPageChange($event)"></mat-paginator>
+    </div>
+</div>
+
+
+<button mat-button color="primary" style="border: 2px solid green;" (click)="sortPokemonByHitPoints()">Sort by Hit Points</button> -->

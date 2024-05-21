@@ -1,0 +1,80 @@
+<!-- <h1>Products</h1> -->
+
+<!-- <button (click)="loadProducts()" type="button">Load Products</button>
+
+<img *ngIf="showLoadingImage" src="https://i.pinimg.com/originals/f3/98/c8/f398c8e928e0886d86c00e7770ccab78.gif" alt="loading">
+
+<div *ngFor="let product of products">
+    {{ product.name }}
+</div> -->
+
+
+
+<!-- <div>
+    <button (click)="loadProducts()">Load Products</button>
+  </div>
+  
+  <div *ngIf="loadingService.loading$ | async">
+    
+    <img src="https://i.pinimg.com/originals/f3/98/c8/f398c8e928e0886d86c00e7770ccab78.gif" alt="Loading..." />
+  </div>
+  
+  <div *ngIf="!(loadingService.loading$ | async)">
+   
+    <h1>Products</h1>
+    <ul>
+      <li *ngFor="let product of products">
+        {{ product.name }} - {{ product.price }}
+      </li>
+    </ul>
+  </div> -->
+
+  <!-- <button mat-raised-button (click)="fetchProducts()">Fetch Products</button>
+
+<div *ngIf="loadingService.loading$ | async" class="loading">
+    <img src="https://i.pinimg.com/originals/f3/98/c8/f398c8e928e0886d86c00e7770ccab78.gif" alt="Loading...">
+</div>
+  
+  <div *ngIf="!(loadingService.loading$ | async)">
+    <div *ngIf="products && products.length > 0" class="product-details">
+      <div *ngFor="let product of products" class="product">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+  
+    <div *ngIf="!products || products.length === 0" class="error-message">
+      Failed to load product data.
+    </div>
+  </div> -->
+
+
+  <button mat-raised-button class="fetch-button" (click)="fetchProducts()">Fetch Products</button>
+
+  <ng-container *ngIf="(loadingService.loading$ | async) && isFetching; else content">
+    <div class="loading">
+      <img src="https://i.pinimg.com/originals/f3/98/c8/f398c8e928e0886d86c00e7770ccab78.gif" alt="Loading...">
+    </div>
+  </ng-container>
+  
+  <ng-template #content>
+    <div class="content-container">
+      <div *ngIf="!(loadingService.loading$ | async) && !isFetching" class="product-details">
+        <div *ngIf="products && products.length > 0" class="product-list">
+          <div *ngFor="let product of products" class="product">
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+          </div>
+        </div>
+  
+        <div *ngIf="showErrorMessage && (!products || products.length === 0)" class="error-message">
+          Failed to load product data.
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  
+
+
+  
+  

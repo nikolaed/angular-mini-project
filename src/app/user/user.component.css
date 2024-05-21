@@ -1,0 +1,35 @@
+.user-form {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .user-group {
+    margin-bottom: 20px;
+  }
+  
+  .user-group-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .address-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .add-address-button {
+    margin-top: 10px;
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  

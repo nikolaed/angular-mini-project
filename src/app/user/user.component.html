@@ -1,0 +1,55 @@
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
+  <div formArrayName="users">
+    <div *ngFor="let userGroup of userGroups.controls; let i = index" class="user-group">
+      <div [formGroupName]="i" class="user-group-container">
+        <h3>User {{ i + 1 }}</h3>
+        <mat-form-field appearance="fill">
+          <input matInput formControlName="userName" placeholder="User Name">
+        </mat-form-field>
+        <div class="form-row">
+          <mat-form-field appearance="fill">
+            <mat-label>Country</mat-label>
+            <mat-select (selectionChange)="onCountrySelected($event, i)" formControlName="country">
+              <mat-option *ngFor="let country of countries" [value]="country.iso2">{{ country.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>State</mat-label>
+            <mat-select (selectionChange)="onStateSelected(userForm.get('users')?.value[i]?.country, userForm.get('users')?.value[i]?.region, i)" formControlName="region">
+              <mat-option *ngFor="let state of userStates[i]" [value]="state.iso2">{{ state.name }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>City</mat-label>
+            <mat-select formControlName="city">
+              <mat-option *ngFor="let city of userCities[i]" [value]="city.id">{{ city.name }}</mat-option>
+            </mat-select>
+          </mat-form-field> 
+        </div>
+        <div formArrayName="addresses">
+          <div *ngFor="let address of getAddressControls(i)?.controls; let j = index" class="address-row">
+            <mat-form-field appearance="fill">
+              <input matInput type="text" [formControlName]="j" placeholder="Address">
+              <button mat-icon-button (click)="removeAddress(i, j)">
+                <mat-icon>remove</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+        </div>
+        <button mat-raised-button type="button" color="primary" (click)="addAddress(i)" class="add-address-button">Add Address</button>
+      </div>
+    </div>
+  </div>
+  <div class="button-row">
+    <button mat-raised-button type="button" color="primary" (click)="addUser()" class="add-user-button">Add More Users</button>
+    <button mat-raised-button type="submit" color="primary" class="submit-button">Submit</button>
+  </div>
+</form>
+
+
+
+
+
+  
+  

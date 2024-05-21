@@ -1,0 +1,80 @@
+<div *ngIf="loadingService.loading$ | async" class="loading">
+    <!-- Place your loading image here -->
+    <img src="https://i.pinimg.com/originals/f3/98/c8/f398c8e928e0886d86c00e7770ccab78.gif" alt="Loading...">
+</div>
+
+<h2>Movies</h2>
+<!-- <mat-button-toggle-group [(ngModel)]="selectedRatingCategory" (change)="filterByRating()">
+    <mat-button-toggle value="0-3">0-3</mat-button-toggle>
+    <mat-button-toggle value="3-6">3-6</mat-button-toggle>
+    <mat-button-toggle value="6-8">6-8</mat-button-toggle>
+    <mat-button-toggle value="8-10">8-10</mat-button-toggle>
+</mat-button-toggle-group>
+<button mat-button (click)="resetFilter()">Reset</button>
+<mat-list>
+    <mat-list-item *ngFor="let movie of filteredMovies">
+        <strong>Title:</strong> {{ movie.movie }} <br>
+        <strong>Rating:</strong> {{ movie.rating }}
+    </mat-list-item>
+</mat-list> -->
+
+
+
+
+<!-- 
+<div *ngIf="!(loadingService.loading$ | async)">
+    <div *ngIf="movies && movies.length > 0" class="product-details">
+        <h2>Rating</h2>
+      <mat-button-toggle-group [(ngModel)]="selectedRatingCategory" (change)="filterByRating()">
+        <mat-button-toggle value="0-3">0-3</mat-button-toggle>
+        <mat-button-toggle value="3-6">3-6</mat-button-toggle>
+        <mat-button-toggle value="6-8">6-8</mat-button-toggle>
+        <mat-button-toggle value="8-10">8-10</mat-button-toggle>
+    </mat-button-toggle-group>
+    <button mat-raised-button (click)="resetFilter()">Reset</button>
+    <mat-list>
+        <mat-list-item *ngFor="let movie of filteredMovies">
+            <strong>Title:</strong> {{ movie.movie }} <br>
+            <strong>Rating:</strong> {{ movie.rating }}
+        </mat-list-item>
+    </mat-list>
+    </div>
+  
+    <div *ngIf="!movies || movies.length === 0" class="error-message">
+      Failed to load product data.
+    </div>
+  </div> -->
+
+
+  <div class="container" *ngIf="!(loadingService.loading$ | async)">
+    <div *ngIf="movies && movies.length > 0" class="product-details">
+        <div class="centered-content">
+            <h2>Rating</h2>
+            <div class="rating-button-container">
+              <mat-button-toggle-group [(ngModel)]="selectedRatingCategory" (change)="filterByRating()">
+                <mat-button-toggle value="0-3">0-3</mat-button-toggle>
+                <mat-button-toggle value="3-6">3-6</mat-button-toggle>
+                <mat-button-toggle value="6-8">6-8</mat-button-toggle>
+                <mat-button-toggle value="8-10">8-10</mat-button-toggle>
+              </mat-button-toggle-group>
+              <button mat-raised-button class="reset-btn" (click)="resetFilter()">Reset</button>
+            </div>
+          </div>
+      <div class="movies-list">
+        <mat-list>
+          <mat-list-item *ngFor="let movie of filteredMovies" class="movie-item">
+            <strong>Title:</strong> {{ movie.movie }} <br>
+            <strong>Rating:</strong> {{ movie.rating }}
+          </mat-list-item>
+        </mat-list>
+      </div>
+      
+    </div>
+  
+    <div *ngIf="!movies || movies.length === 0" class="error-message">
+      Failed to load product data.
+    </div>
+  </div>
+  
+
+  
